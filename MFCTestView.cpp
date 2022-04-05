@@ -49,13 +49,13 @@ BOOL CMFCTestView::PreCreateWindow(CREATESTRUCT& cs)
 
 // CMFCTestView 绘图
 
-void CMFCTestView::OnDraw(CDC* /*pDC*/)
+void CMFCTestView::OnDraw(CDC* pDC/**/)
 {
 	CMFCTestDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
-
+	pDC->Ellipse(100, 100, 200, 300);
 	// TODO: 在此处为本机数据添加绘制代码
 }
 
